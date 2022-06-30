@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import Nav from '../../components/Nav/Nav';
+import DefaultLayout from '../../layouts/Default';
 
 export default function Cat() {
 	const [cat, setCat] = useState(null);
@@ -18,11 +19,10 @@ export default function Cat() {
 		fetchCat();
 	}, []);
 
-  return (
-    <div>
-      <Nav />
+	return (
+		<DefaultLayout>
 			{cat && (
-				<div className="container mt-5" style={{ display: "flex" }}>
+				<div className="container mt-5" style={{ display: 'flex' }}>
 					<img src={cat.image.url} alt={cat.image.alt} />
 					<div className="mx-5">
 						<h1>{cat.name}</h1>
@@ -30,6 +30,6 @@ export default function Cat() {
 					</div>
 				</div>
 			)}
-		</div>
+		</DefaultLayout>
 	);
 }
