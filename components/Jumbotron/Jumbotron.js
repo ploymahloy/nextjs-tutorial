@@ -11,7 +11,7 @@ export default function Jumbotron() {
 				<p className="lead">
 					Find your new best friend today. Adpot a wonderful cat.
 				</p>
-				<button type="button" class="btn btn-primary" onClick={() => router.push("/cats")}>
+				<button type="button" className="btn btn-primary" onClick={() => router.push("/cats")}>
 					Start looking
 				</button>
 			</div>
